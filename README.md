@@ -11,5 +11,6 @@ A browser-based chess game built with TypeScript, HTML Canvas, and Vite.
 3. Start the development server: npm run dev
 4. Open the game in your browser
 
-## Demo of the game
-[**Live Demo Here**]([https://your-username.github.io/chess-game-ts/](https://drive.google.com/file/d/1mCHvikbx3-QwJGICn5j1vnGoEn1Jo82s/view?usp=sharing)) 
+## Demo of the game  
+[**Live Demo Here**](https://drive.google.com/file/d/1mCHvikbx3-QwJGICn5j1vnGoEn1Jo82s/view?usp=sharing)
+

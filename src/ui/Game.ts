@@ -34,12 +34,10 @@ export class Game {
     if (piece && piece.moves.some(m => m.final.equals(targetSquare))) {
       const move = new Move(this.fromSquare!, targetSquare);
       const captured = targetSquare.hasPiece();
-      
+  
       this.board.move(piece, move);
       this.board.setTrueEnPassant(piece);
   
-      // Check for check or checkmate
-      this.isCheck = this.board.inCheck(this.getEnemyKing(), move);
       const enemyPieces = this.getEnemyPieces();
       let hasValidMoves = false;
   
@@ -61,6 +59,7 @@ export class Game {
     this.selectedPiece = null;
     this.fromSquare = null;
   }
+  
 
   getEnemyPieces(): { piece: Piece; row: number; col: number }[] {
     const enemyColor = this.nextPlayer === "white" ? "black" : "white";
@@ -78,7 +77,6 @@ export class Game {
     return result;
   }
   
-  
   getEnemyKing(): Piece {
     const enemyColor = this.nextPlayer === "white" ? "black" : "white";
   
@@ -93,7 +91,6 @@ export class Game {
   
     throw new Error("Enemy king not found");
   }
-  
   
 
   clearSelection(): void {

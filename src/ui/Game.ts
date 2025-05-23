@@ -60,6 +60,7 @@ export class Game {
     this.fromSquare = null;
   }
   
+  
 
   getEnemyPieces(): { piece: Piece; row: number; col: number }[] {
     const enemyColor = this.nextPlayer === "white" ? "black" : "white";
